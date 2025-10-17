@@ -20,7 +20,7 @@ from pydantic_settings import BaseSettings
 
 # ------------------------- Settings -------------------------
 class Settings(BaseSettings):
-    API_KEY: str = Field("", env="API_KEY")
+    GEMINI_API_KEY: str = Field("", env="GEMINI_API_KEY")
     GITHUB_TOKEN: str = Field("", env="GITHUB_TOKEN")
     GITHUB_USERNAME: str = Field("", env="GITHUB_USERNAME")
     STUDENT_SECRET: str = Field("", env="STUDENT_SECRET")
@@ -674,3 +674,4 @@ async def shutdown_event():
                 pass
     await asyncio.sleep(0.5)
     flush_logs()
+
